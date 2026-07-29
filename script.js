@@ -28,28 +28,33 @@ if (menuToggle && navLinks) {
 
 
 
-
 // =========================
-// Menü schließen nach Klick
+// Menü schließen nach Auswahl
 // =========================
 
 
 const navItems = document.querySelectorAll(".nav-links a");
 
 
-navItems.forEach(item => {
+
+navItems.forEach(link => {
 
 
-    item.addEventListener("click", () => {
+    link.addEventListener("click", () => {
 
 
-        navLinks.classList.remove("active");
+        if(navLinks){
+
+            navLinks.classList.remove("active");
+
+        }
 
 
     });
 
 
 });
+
 
 
 
@@ -76,7 +81,7 @@ const observer = new IntersectionObserver(
         entries.forEach(entry => {
 
 
-            if (entry.isIntersecting) {
+            if(entry.isIntersecting){
 
 
                 entry.target.classList.add("show");
@@ -93,7 +98,9 @@ const observer = new IntersectionObserver(
 
     {
 
-        threshold: 0.15
+
+        threshold:0.15
+
 
     }
 
@@ -122,23 +129,57 @@ sections.forEach(section => {
 
 
 
+
 // =========================
-// Automatisches Jahr im Footer
+// Automatisches Jahr Footer
 // =========================
 
 
-const footerYear = document.querySelector("footer p");
+const footerText = document.querySelector("footer p");
 
 
 
-if (footerYear) {
+if(footerText){
 
 
-    const year = new Date().getFullYear();
+    const currentYear = new Date().getFullYear();
 
 
-    footerYear.innerHTML =
-    `© ${year} Abdul Ghani Alchaiteh`;
+
+    footerText.textContent =
+
+    `© ${currentYear} Abdul Ghani Alchaiteh`;
 
 
 }
+
+
+
+
+
+
+
+
+
+// =========================
+// Bilder Animation beim Laden
+// =========================
+
+
+const projectImages = document.querySelectorAll(".project img");
+
+
+
+projectImages.forEach(image => {
+
+
+    image.addEventListener("load", () => {
+
+
+        image.style.opacity = "1";
+
+
+    });
+
+
+});
