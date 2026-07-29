@@ -1,5 +1,5 @@
 /* =========================
-   Allgemeine Einstellungen
+   Grund Einstellungen
 ========================= */
 
 * {
@@ -18,11 +18,13 @@ html {
 }
 
 
+
 body {
 
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 
-    background: linear-gradient(
+    background:
+    linear-gradient(
         135deg,
         #eef4ff,
         #ffffff
@@ -48,8 +50,6 @@ a {
 
 
 
-
-
 /* =========================
    Navigation
 ========================= */
@@ -65,22 +65,21 @@ header {
 
     position: sticky;
 
-    top: 0;
+    top:0;
 
-    z-index: 1000;
+    z-index:1000;
 
 }
 
 
 
-
 nav {
 
-    max-width: 1200px;
+    max-width:1200px;
 
-    margin: auto;
+    margin:auto;
 
-    padding: 20px;
+    padding:20px;
 
     display:flex;
 
@@ -89,7 +88,6 @@ nav {
     align-items:center;
 
 }
-
 
 
 
@@ -102,7 +100,6 @@ nav {
     color:#1e3a8a;
 
 }
-
 
 
 
@@ -154,11 +151,8 @@ nav {
 
 
 
-
-
-
 /* =========================
-   Bereiche
+   Allgemeine Bereiche
 ========================= */
 
 
@@ -174,10 +168,9 @@ section {
 
 
 
-
 section h2 {
 
-    font-size:34px;
+    font-size:36px;
 
     color:#1e3a8a;
 
@@ -189,14 +182,11 @@ section h2 {
 
 section p {
 
-    font-size:17px;
-
     max-width:850px;
 
+    font-size:17px;
+
 }
-
-
-
 
 
 
@@ -215,7 +205,6 @@ section p {
 
 
 
-
 .home-container {
 
     display:flex;
@@ -230,13 +219,11 @@ section p {
 
 
 
-
 .home-text {
 
     max-width:650px;
 
 }
-
 
 
 
@@ -252,7 +239,6 @@ section p {
 
 
 
-
 #home h2 {
 
     font-size:30px;
@@ -260,8 +246,6 @@ section p {
     color:#2563eb;
 
 }
-
-
 
 
 
@@ -279,24 +263,21 @@ section p {
 
 
 
-
-
 .home-buttons a {
 
     background:#2563eb;
 
     color:white;
 
-    padding:12px 25px;
+    padding:13px 25px;
 
-    border-radius:10px;
+    border-radius:12px;
 
     font-weight:600;
 
     transition:.3s;
 
 }
-
 
 
 
@@ -312,15 +293,13 @@ section p {
 
 
 
-
-
-
 /* =========================
    Profilbild
 ========================= */
 
 
 .home-image img {
+
 
     width:300px;
 
@@ -332,14 +311,15 @@ section p {
 
     border:5px solid white;
 
+
     box-shadow:
 
-    0 20px 50px rgba(37,99,235,0.25);
+    0 20px 50px rgba(0,0,0,0.15);
+
 
     transition:.4s;
 
 }
-
 
 
 
@@ -348,9 +328,6 @@ section p {
     transform:translateY(-10px);
 
 }
-
-
-
 
 
 
@@ -369,14 +346,14 @@ section p {
 
     margin-bottom:25px;
 
-    border-radius:18px;
+    border-radius:20px;
+
 
     box-shadow:
 
     0 10px 30px rgba(0,0,0,0.08);
 
 }
-
 
 
 
@@ -392,11 +369,9 @@ section p {
 
 .skill-box ul {
 
-    padding-left:20px;
+    padding-left:25px;
 
 }
-
-
 
 
 
@@ -405,9 +380,6 @@ section p {
     margin-bottom:8px;
 
 }
-
-
-
 
 
 
@@ -424,18 +396,54 @@ section p {
 
     padding:35px;
 
-    margin-bottom:25px;
+    margin-bottom:35px;
 
-    border-radius:18px;
+    border-radius:20px;
 
-    border-left:6px solid #2563eb;
+
+    border-left:
+
+    6px solid #2563eb;
+
 
     box-shadow:
 
     0 10px 30px rgba(0,0,0,0.08);
 
+
+    transition:.3s;
+
 }
 
+
+
+.project:hover {
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.project img {
+
+
+    width:100%;
+
+    max-width:750px;
+
+    height:auto;
+
+    border-radius:15px;
+
+    margin-bottom:25px;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,0.15);
+
+}
 
 
 
@@ -443,12 +451,36 @@ section p {
 
     color:#1e3a8a;
 
+    font-size:24px;
+
     margin-bottom:15px;
 
 }
 
 
 
+
+
+/* =========================
+   Erfahrung
+========================= */
+
+
+#experience ul {
+
+    margin-top:20px;
+
+    padding-left:25px;
+
+}
+
+
+
+#experience li {
+
+    margin-bottom:10px;
+
+}
 
 
 
@@ -461,6 +493,7 @@ section p {
 
 #cv a {
 
+
     display:inline-block;
 
     margin-top:20px;
@@ -469,12 +502,13 @@ section p {
 
     color:white;
 
-    padding:13px 28px;
+    padding:14px 30px;
 
-    border-radius:10px;
+    border-radius:12px;
+
+    transition:.3s;
 
 }
-
 
 
 
@@ -488,9 +522,6 @@ section p {
 
 
 
-
-
-
 /* =========================
    Kontakt
 ========================= */
@@ -498,16 +529,19 @@ section p {
 
 #contact {
 
-    background:white;
 
-    border-radius:18px;
+    background:white;
 
     padding:50px;
 
+    border-radius:20px;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,0.08);
+
 }
-
-
-
 
 
 
@@ -529,9 +563,6 @@ footer {
     color:white;
 
 }
-
-
-
 
 
 
@@ -566,16 +597,12 @@ footer {
 
 
 
-
-
-
 /* =========================
    Smartphone
 ========================= */
 
 
 @media(max-width:768px){
-
 
 
 nav {
@@ -594,21 +621,28 @@ nav {
 
 
 
-
 .nav-links {
+
 
     display:none;
 
     flex-direction:column;
 
+    position:absolute;
+
+    top:70px;
+
+    left:0;
+
     width:100%;
+
+    background:white;
+
+    padding:20px;
 
     text-align:center;
 
-    margin-top:20px;
-
 }
-
 
 
 
@@ -617,7 +651,6 @@ nav {
     display:flex;
 
 }
-
 
 
 
@@ -631,10 +664,17 @@ nav {
 
 
 
-
 #home h1 {
 
     font-size:40px;
+
+}
+
+
+
+#home h2 {
+
+    font-size:24px;
 
 }
 
@@ -647,7 +687,6 @@ nav {
     height:300px;
 
 }
-
 
 
 
@@ -673,6 +712,21 @@ section {
 
 }
 
+
+
+section h2 {
+
+    font-size:30px;
+
+}
+
+
+
+.project {
+
+    padding:25px;
+
+}
 
 
 
