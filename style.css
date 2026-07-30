@@ -739,3 +739,51 @@ section h2 {
 
 
 }
+
+/* =========================
+   Projekt Links
+========================= */
+
+.project-buttons {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+
+
+.project-buttons a {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+
+
+.project-buttons a:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-3px);
+
+}
