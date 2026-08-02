@@ -787,3 +787,82 @@ section h2 {
     transform: translateY(-3px);
 
 }
+
+
+/* ===================================
+   Projekt Screenshot Galerie
+   Horizontal Scroll wie Instagram
+=================================== */
+
+
+.project-image-gallery {
+
+    display: flex;
+    gap: 15px;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+
+    padding: 10px 5px 15px 5px;
+
+    width: 100%;
+
+    scrollbar-width: thin;
+
+}
+
+
+
+/* einzelne Bilder */
+
+.project-image-gallery img {
+
+    flex: 0 0 auto;
+
+    width: 320px;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 2px solid rgba(255,255,255,0.15);
+
+}
+
+
+
+/* Scrollbar für Chrome */
+
+.project-image-gallery::-webkit-scrollbar {
+
+    height: 8px;
+
+}
+
+
+.project-image-gallery::-webkit-scrollbar-thumb {
+
+    border-radius: 10px;
+
+}
+
+
+
+/* Mobile Ansicht */
+
+@media(max-width:700px){
+
+
+.project-image-gallery img {
+
+    width: 280px;
+
+    height: 190px;
+
+}
+
+
+}
