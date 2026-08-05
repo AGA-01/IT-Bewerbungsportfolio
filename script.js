@@ -2,11 +2,8 @@
 // Mobile Navigation
 // =========================
 
-
 const menuToggle = document.querySelector(".menu-toggle");
-
 const navLinks = document.querySelector(".nav-links");
-
 
 
 if (menuToggle && navLinks) {
@@ -27,20 +24,17 @@ if (menuToggle && navLinks) {
 
 
 
-
 // =========================
-// Menü schließen nach Auswahl
+// Menü schließen nach Klick
 // =========================
-
 
 const navItems = document.querySelectorAll(".nav-links a");
 
 
+navItems.forEach(item => {
 
-navItems.forEach(link => {
 
-
-    link.addEventListener("click", () => {
+    item.addEventListener("click", () => {
 
 
         if(navLinks){
@@ -61,15 +55,11 @@ navItems.forEach(link => {
 
 
 
-
-
 // =========================
 // Scroll Animation
 // =========================
 
-
 const sections = document.querySelectorAll("section");
-
 
 
 const observer = new IntersectionObserver(
@@ -98,9 +88,7 @@ const observer = new IntersectionObserver(
 
     {
 
-
         threshold:0.15
-
 
     }
 
@@ -110,18 +98,15 @@ const observer = new IntersectionObserver(
 
 
 
-
 sections.forEach(section => {
 
 
     section.classList.add("hidden");
 
-
     observer.observe(section);
 
 
 });
-
 
 
 
@@ -138,12 +123,10 @@ sections.forEach(section => {
 const footerText = document.querySelector("footer p");
 
 
-
 if(footerText){
 
 
     const currentYear = new Date().getFullYear();
-
 
 
     footerText.textContent =
@@ -160,17 +143,21 @@ if(footerText){
 
 
 
-
 // =========================
-// Bilder Animation beim Laden
+// Projektbilder Animation
 // =========================
 
 
-const projectImages = document.querySelectorAll(".project img");
+const images = document.querySelectorAll(".project img");
 
 
+images.forEach(image => {
 
-projectImages.forEach(image => {
+
+    image.style.opacity = "0";
+
+
+    image.style.transition = "opacity 0.6s ease";
 
 
     image.addEventListener("load", () => {
@@ -180,6 +167,92 @@ projectImages.forEach(image => {
 
 
     });
+
+
+    // Falls Bild bereits geladen wurde
+
+    if(image.complete){
+
+
+        image.style.opacity = "1";
+
+
+    }
+
+
+});
+
+
+
+
+
+
+
+
+// =========================
+// Smooth Scroll für interne Links
+// =========================
+
+
+const internalLinks = document.querySelectorAll('a[href^="#"]');
+
+
+internalLinks.forEach(link => {
+
+
+    link.addEventListener("click", function(e){
+
+
+        const target = document.querySelector(
+            this.getAttribute("href")
+        );
+
+
+        if(target){
+
+
+            e.preventDefault();
+
+
+            target.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+
+        }
+
+
+    });
+
+
+});
+
+
+
+
+
+
+
+
+// =========================
+// Externe Links sicher öffnen
+// =========================
+
+
+const externalLinks = document.querySelectorAll(
+    'a[target="_blank"]'
+);
+
+
+externalLinks.forEach(link => {
+
+
+    link.setAttribute(
+        "rel",
+        "noopener noreferrer"
+    );
 
 
 });
