@@ -1,27 +1,22 @@
-/* =========================
-   Grund Einstellungen
-========================= */
-
 * {
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 
 }
 
 
 html {
 
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 
 }
 
 
-
 body {
 
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family:"Segoe UI", Arial, Helvetica, sans-serif;
 
     background:
     linear-gradient(
@@ -30,9 +25,9 @@ body {
         #ffffff
     );
 
-    color: #1f2937;
+    color:#1f2937;
 
-    line-height: 1.7;
+    line-height:1.7;
 
 }
 
@@ -40,9 +35,9 @@ body {
 
 a {
 
-    text-decoration: none;
+    text-decoration:none;
 
-    color: #2563eb;
+    color:#2563eb;
 
 }
 
@@ -57,13 +52,13 @@ a {
 
 header {
 
-    background: rgba(255,255,255,0.95);
+    background:rgba(255,255,255,0.95);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter:blur(10px);
 
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom:1px solid #e5e7eb;
 
-    position: sticky;
+    position:sticky;
 
     top:0;
 
@@ -151,6 +146,8 @@ nav {
 
 
 
+
+
 /* =========================
    Allgemeine Bereiche
 ========================= */
@@ -187,6 +184,9 @@ section p {
     font-size:17px;
 
 }
+
+
+
 
 
 
@@ -245,7 +245,11 @@ section p {
 
     color:#2563eb;
 
+    margin-bottom:20px;
+
 }
+
+
 
 
 
@@ -293,6 +297,9 @@ section p {
 
 
 
+
+
+
 /* =========================
    Profilbild
 ========================= */
@@ -314,7 +321,7 @@ section p {
 
     box-shadow:
 
-    0 20px 50px rgba(0,0,0,0.15);
+    0 20px 50px rgba(37,99,235,0.25);
 
 
     transition:.4s;
@@ -333,12 +340,17 @@ section p {
 
 
 
+
+
+
+
 /* =========================
-   Fähigkeiten
+   Skills
 ========================= */
 
 
 .skill-box {
+
 
     background:white;
 
@@ -352,6 +364,7 @@ section p {
     box-shadow:
 
     0 10px 30px rgba(0,0,0,0.08);
+
 
 }
 
@@ -385,12 +398,17 @@ section p {
 
 
 
+
+
+
+
 /* =========================
    Projekte
 ========================= */
 
 
 .project {
+
 
     background:white;
 
@@ -425,14 +443,24 @@ section p {
 
 
 
+.project h3 {
+
+    color:#1e3a8a;
+
+    font-size:25px;
+
+    margin-bottom:15px;
+
+}
+
+
+
 .project img {
 
 
     width:100%;
 
     max-width:750px;
-
-    height:auto;
 
     border-radius:15px;
 
@@ -447,13 +475,14 @@ section p {
 
 
 
-.project h3 {
 
-    color:#1e3a8a;
 
-    font-size:24px;
 
-    margin-bottom:15px;
+.project ul {
+
+    padding-left:25px;
+
+    margin-top:15px;
 
 }
 
@@ -461,12 +490,115 @@ section p {
 
 
 
+
+
 /* =========================
-   Erfahrung
+   Projekt Buttons
 ========================= */
 
 
-#experience ul {
+.project-buttons {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+
+
+.project-buttons a {
+
+
+    width:max-content;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.project-buttons a:hover {
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   Projekt Galerie
+========================= */
+
+
+.project-image-gallery {
+
+
+    display:flex;
+
+    gap:15px;
+
+    overflow-x:auto;
+
+    margin-bottom:25px;
+
+    padding-bottom:10px;
+
+}
+
+
+
+.project-image-gallery img {
+
+
+    width:320px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    flex-shrink:0;
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   Karriere / Erfahrung
+========================= */
+
+
+#experience ul,
+#career ul {
+
 
     margin-top:20px;
 
@@ -476,11 +608,14 @@ section p {
 
 
 
-#experience li {
+#experience li,
+#career li {
 
     margin-bottom:10px;
 
 }
+
+
 
 
 
@@ -514,9 +649,13 @@ section p {
 
 #cv a:hover {
 
+
     background:#2563eb;
 
 }
+
+
+
 
 
 
@@ -547,6 +686,9 @@ section p {
 
 
 
+
+
+
 /* =========================
    Footer
 ========================= */
@@ -563,6 +705,9 @@ footer {
     color:white;
 
 }
+
+
+
 
 
 
@@ -597,6 +742,10 @@ footer {
 
 
 
+
+
+
+
 /* =========================
    Smartphone
 ========================= */
@@ -618,6 +767,7 @@ nav {
     display:block;
 
 }
+
 
 
 
@@ -654,6 +804,8 @@ nav {
 
 
 
+
+
 .home-container {
 
     flex-direction:column-reverse;
@@ -661,6 +813,7 @@ nav {
     text-align:center;
 
 }
+
 
 
 
@@ -680,11 +833,14 @@ nav {
 
 
 
+
 .home-image img {
+
 
     width:240px;
 
     height:300px;
+
 
 }
 
@@ -706,11 +862,13 @@ nav {
 
 
 
+
 section {
 
     padding:60px 20px;
 
 }
+
 
 
 
@@ -722,6 +880,7 @@ section h2 {
 
 
 
+
 .project {
 
     padding:25px;
@@ -730,137 +889,22 @@ section h2 {
 
 
 
+
+.project-image-gallery img {
+
+
+    width:280px;
+
+    height:190px;
+
+
+}
+
+
+
 #contact {
 
     padding:30px;
-
-}
-
-
-
-}
-
-/* =========================
-   Projekt Links
-========================= */
-
-.project-buttons {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 15px;
-
-    margin-top: 25px;
-
-}
-
-
-
-.project-buttons a {
-
-    display: inline-block;
-
-    width: fit-content;
-
-    background: #2563eb;
-
-    color: white;
-
-    padding: 12px 25px;
-
-    border-radius: 10px;
-
-    font-weight: 600;
-
-    transition: .3s;
-
-}
-
-
-
-.project-buttons a:hover {
-
-    background: #1d4ed8;
-
-    transform: translateY(-3px);
-
-}
-
-
-/* ===================================
-   Projekt Screenshot Galerie
-   Horizontal Scroll wie Instagram
-=================================== */
-
-
-.project-image-gallery {
-
-    display: flex;
-    gap: 15px;
-
-    overflow-x: auto;
-
-    scroll-behavior: smooth;
-
-    padding: 10px 5px 15px 5px;
-
-    width: 100%;
-
-    scrollbar-width: thin;
-
-}
-
-
-
-/* einzelne Bilder */
-
-.project-image-gallery img {
-
-    flex: 0 0 auto;
-
-    width: 320px;
-
-    height: 220px;
-
-    object-fit: cover;
-
-    border-radius: 12px;
-
-    border: 2px solid rgba(255,255,255,0.15);
-
-}
-
-
-
-/* Scrollbar für Chrome */
-
-.project-image-gallery::-webkit-scrollbar {
-
-    height: 8px;
-
-}
-
-
-.project-image-gallery::-webkit-scrollbar-thumb {
-
-    border-radius: 10px;
-
-}
-
-
-
-/* Mobile Ansicht */
-
-@media(max-width:700px){
-
-
-.project-image-gallery img {
-
-    width: 280px;
-
-    height: 190px;
 
 }
 
